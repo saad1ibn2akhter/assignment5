@@ -451,7 +451,24 @@
               <input id="number-input"  class="mb-1 rounded-lg py-3 px-2 w-full" style="border: 0.5px solid gray;"  type="text" name="" id="" placeholder="Enter Your Phone Number">
               <h1 class="mb-1">Email ID</h1>
               <input  class="mb-1 rounded-lg py-3 px-2 w-full" style="border: 0.5px solid gray;" type="email" name="" id="" placeholder="Enter Your Email ID" ><br>
-              <button id="next-button" class="mt-2 btn w-full bg-green-500 text-white font-bold" disabled>Next</button>
+              <button id="next-button" class="mt-2 btn w-full bg-green-500 text-white font-bold" onclick="my_modal_5.showModal()" disabled>Next</button>
+              <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box overflow-y-hidden  w-full">
+                  <div class="flex justify-center">
+                    <img class="text-center" src="images/success.png" alt="">
+                  </div>
+                  <h3 class="font-bold text-[28px] text-green-500  text-center">Success</h3>
+                  <p class="py-4 text-center text-[16px] font-medium">Thank you for Booking Our Bus Seats. <br> We are working hard to find the best service and deals for you. </p>
+                  <p class="text-center text-gray-800">Shortly you will find a confirmation in your email</p>
+                  <div class="modal-action flex justify-center">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button id="closeButton" class="btn btn-success rounded-3xl text-center justify-center px-16 py-4 text-white text-[18px]">Continue</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+              
               <div class="flex justify-center items-center gap-4 mt-2">
                 <a href="" class="link link-secondary text-[12px] lg:text-[16px]">Terms and Conditions</a>
                 <a href="" class="link link-secondary text-[12px] lg:text-[16px]">Cancellation Policy</a>
