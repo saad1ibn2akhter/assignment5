@@ -97,3 +97,11 @@ function getIDinfo() {
     console.log(event);
 }
 
+// Get the button element
+var scrollToTopButton = document.getElementById("scrollToTopButton");
+scrollToTopButton.addEventListener("click", function() {
+    window.scrollTo({
+        top:1560,
+        behavior: "smooth"
+    });
+});
