@@ -147,7 +147,10 @@
                 </div>
               </div>
               <div class="">
-                <button class=" btn btn-success "><span id="total-seat">40</span> seats available</button>
+                <button class=" btn btn-success text-green-500 bg-green-200 flex ">
+                  <img src="images/seat-green.png" alt="">
+                  <h1><span id="total-seat">40</span> seats available</h1>
+                </button>
               </div>
             </div>
 
@@ -163,8 +166,8 @@
               </div>
               <hr><br>
               <div class="flex justify-between space-x-1 text-[12px] lg:space-x-7 lg:text-[16px] text-center " >
-                <div class="bg-gray-100 p-1 rounded-lg lg:p-4">Boarding point - <span class="font-bold">laxmipur</span></div>
-                <div class="bg-gray-100 p-1 rounded-lg lg:p-4">Droping point - <span class="font-bold">bogra</span></div>
+                <div class="bg-gray-100 p-1 rounded-lg lg:p-4">Boarding point - <span class="font-bold">Laxmipur</span></div>
+                <div class="bg-gray-100 p-1 rounded-lg lg:p-4">Droping point - <span class="font-bold">Bogra</span></div>
                 <div class="bg-gray-100 p-1 rounded-lg lg:p-4">Estd. time -  <span class="font-bold">11 hours</span></div>
               </div>
             </div>
@@ -190,7 +193,9 @@
         <div class="flex flex-col lg:flex-row justify-between ">
           <div class="">
             <div><h1 class="capitalize text-[24px] font-medium">select your seat</h1></div>
+            <br>
             <hr>
+            <br>
             <div class="flex justify-between items-center">
               <div class="flex space-x-2">
                 <img src="images/seat-gray.png" alt="">
@@ -201,10 +206,13 @@
                 <h1 class="text-gray-700">Selected</h1>
               </div>
             </div>
+            <br>
             <hr>
+            <br>
             <div class="flex justify-end rounded-xl">
-              <img class="h-[56px] w-[84px] rounded-xl" src="steer.jpeg" alt="">
+              <img class="h-[64px] w-[106px] rounded-xl" src="steer.jpeg" alt="">
             </div>
+            <br>
             <!-- tickets / seats -->
             <div class="text-[15px] lg:text-[20px]">
               <div class="flex justify-between items-center mb-2">
@@ -439,11 +447,11 @@
             <div class="bg-white p-4">
               <h1 class="mb-1">Passenger Name <span class="text-red-400">*</span></h1>
               <input class="mb-1 rounded-lg py-3 px-2 w-full" style="border: 0.5px solid gray;" type="text" name="" id="" placeholder="Enter Your Name">
-              <h1 class="mb-1">Phone Number<span class="text-red-400">*</span></h1>
-              <input  class="mb-1 rounded-lg py-3 px-2 w-full" style="border: 0.5px solid gray;"  type="text" name="" id="" placeholder="Enter Your Phone Number">
+              <h1  class="mb-1">Phone Number<span class="text-red-400">*</span></h1>
+              <input id="number-input"  class="mb-1 rounded-lg py-3 px-2 w-full" style="border: 0.5px solid gray;"  type="text" name="" id="" placeholder="Enter Your Phone Number">
               <h1 class="mb-1">Email ID</h1>
               <input  class="mb-1 rounded-lg py-3 px-2 w-full" style="border: 0.5px solid gray;" type="email" name="" id="" placeholder="Enter Your Email ID" ><br>
-              <button class="mt-2 btn w-full bg-green-500 text-white font-bold">Next</button>
+              <button id="next-button" class="mt-2 btn w-full bg-green-500 text-white font-bold" disabled>Next</button>
               <div class="flex justify-center items-center gap-4 mt-2">
                 <a href="" class="link link-secondary text-[12px] lg:text-[16px]">Terms and Conditions</a>
                 <a href="" class="link link-secondary text-[12px] lg:text-[16px]">Cancellation Policy</a>

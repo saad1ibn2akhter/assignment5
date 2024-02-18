@@ -2,7 +2,8 @@
 function getIDinfo() {
     const id = event.target.id;
     const ticket = document.getElementById(id);
-    ticket.classList.add('bg-green-300');
+    // ticket.classList.add('bg-green-300');
+
 
     const mainContainer = document.getElementById('item-container');
     const seat = ticket.innerText;
@@ -41,20 +42,52 @@ function getIDinfo() {
 
     `;
     
+    
     mainContainer.appendChild(div2);
 
+    
+    
+    if(ticketNumber<=4){
+        ticket.classList.add('bg-green-300');
+    }
+    
+    
     if(ticketNumber === 4){
         document.getElementById('apply-button').removeAttribute('disabled');
     }
-    if(ticketNumber ===5)
+    // const nextButton = document.getElementById('next-button');
+    // const numberInput = document.getElementById('number-input').value;
+    // console.log(numberInput);
+    // const number  = parseInt(numberInput);
+
+    // if(numberInput.length >=1 && ticketNumber >=1){
+    //     nextButton.removeAttribute('disabled');
+    // }
+    
+    if(ticketNumber === 5)
     {
         alert('ki koro vai.??');
         ticketNumber = 4;
         mainContainer.removeChild(div2);
         totalSeatNumber =36;
-
+        if (!ticket.classList.contains('bg-green-300')) {
+            ticket.classList.add('bg-gray-100');
+        }
         
     }
+
+    const nextButton = document.getElementById('next-button');
+    const numberInput = document.getElementById('number-input')
+    numberInput.addEventListener('keyup',function(event){
+        const text = event.target.value;
+        if(text.length >= 1 && ticketNumber >= 1){
+            nextButton.removeAttribute('disabled');
+        }
+        else{
+            nextButton.setAttribute('disabled');
+        }
+    });
+    
    
     const ticketPrice = ticketNumber*550;
     document.getElementById('total-price').innerText = ticketPrice;
