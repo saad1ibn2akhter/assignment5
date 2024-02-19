@@ -28,6 +28,9 @@ function getIDinfo() {
     const h2 = document.createElement('div');
     h2.innerText = standardClass;
 
+    // div.appendChild(h1);
+    // div.appendChild(p);
+    // div.appendChild(h2);
     const div2 = document.createElement('div');
     div2.innerHTML = 
     `
@@ -43,28 +46,27 @@ function getIDinfo() {
     mainContainer.appendChild(div2);
 
     
-
-    if(ticketNumber <= 4){
-        if(ticket.classList.contains('bg-green-300')){
-            alert('Sorry !! You cannot buy same ticket twice .');
-            mainContainer.removeChild(div2);
-            ticketNumber = ticketNumber - 1 ;
-            totalSeatNumber = totalSeatNumber + 1;
-        }
-        ticket.classList.add('bg-green-300');
-       
-        
-    }
-
-    if(ticketNumber === 4){
     
-        document.getElementById('apply-button').removeAttribute('disabled');
-       
+    if(ticketNumber<=4){
+        ticket.classList.add('bg-green-300');
     }
+    
+    
+    if(ticketNumber === 4){
+        document.getElementById('apply-button').removeAttribute('disabled');
+    }
+    // const nextButton = document.getElementById('next-button');
+    // const numberInput = document.getElementById('number-input').value;
+    // console.log(numberInput);
+    // const number  = parseInt(numberInput);
+
+    // if(numberInput.length >=1 && ticketNumber >=1){
+    //     nextButton.removeAttribute('disabled');
+    // }
     
     if(ticketNumber === 5)
     {
-        alert('Sorry !! You Cannot buy more than 4 tickets at a time.');
+        alert('ki koro vai.??');
         ticketNumber = 4;
         mainContainer.removeChild(div2);
         totalSeatNumber =36;
@@ -88,47 +90,18 @@ function getIDinfo() {
     
    
     const ticketPrice = ticketNumber*550;
-    
     document.getElementById('total-price').innerText = ticketPrice;
-    document.getElementById('grand-total').innerText = ticketPrice ;
     document.getElementById('count').innerText = ticketNumber;
     document.getElementById('total-seat').innerText = totalSeatNumber;
-    
+    // ticketCount++;
     console.log(event);
 }
 
+// Get the button element
 var scrollToTopButton = document.getElementById("scrollToTopButton");
 scrollToTopButton.addEventListener("click", function() {
     window.scrollTo({
-        top:1200,
+        top:1560,
         behavior: "smooth"
     });
-});
-
-const btn = document.getElementById('apply-button');
-btn.addEventListener("click",function(){
-    const couponElement = document.getElementById('coupon-input').value;
-    console.log(couponElement);
-
-    if(couponElement === "NEW15"){
-        document.getElementById('grand-total').innerText = "1870";
-        document.getElementById('apply-button').setAttribute('disabled' ,true);
-        document.getElementById('coupon-input').value ="";
-        document.getElementById('coupon-input').style.display = 'none';
-        document.getElementById('apply-button').style.display = 'none';
-    }
-    else if(couponElement === "Couple 20"){
-        document.getElementById('grand-total').innerText = "1760";
-        document.getElementById('apply-button').setAttribute('disabled',true);
-        document.getElementById('coupon-input').value ="";
-        document.getElementById('coupon-input').style.display = 'none';
-        document.getElementById('apply-button').style.display = 'none';
-    }
-    else{
-        alert('invaid coupon code given !!');
-        document.getElementById('coupon-input').value ="";
-    }
-    
-
-    
 });
